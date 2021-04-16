@@ -1,7 +1,0 @@
-struct 1:   1430 repeats,  topology ---0
-struct 5:   205 repeats,  topology 0--0
-struct 4:   130 repeats,  topology 0---
-struct 2:   117 repeats,  topology ---+
-struct 3:   15 repeats,  topology -0-+
-struct 6:   3 repeats,  topology +--0
-struct 7:   1 repeats,  topology +-0-
