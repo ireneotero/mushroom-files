@@ -5,28 +5,9 @@ clc
 % compute number of different structures
 
 
-load mushroom3D_1
-load mushroom3D_2
-load mushroom3D_3
-load mushroom3D_4
+load mushroom3D
 
-for ii=1:1:2400
-Results{ii}=Mushroom_1{ii};
-end
-
-for ii=2401:1:4800
-Results{ii}=Mushroom_2{ii-2400};
-end
-
-for ii=4801:1:7200
-Results{ii}=Mushroom_3{ii-4800};
-end
-
-for ii=7201:1:9620
-Results{ii}=Mushroom_4{ii-7200};
-end
-
-
+Results=Mushroom;
 
 for ii=1:1:max(size(Results))      
     str_u(ii,:)=Results{ii}.xbest(14:end); % structure
@@ -75,18 +56,18 @@ for ii=2:1:size(str,1)
 %     
      labelc{count} = label{ii};
      labelc{count};
-    
 %     
-end
-
-
-%  number of solutions and structures
- number_of_solutions = size(str,1);
- number_of_different_structures = count;
+%     
+ end
+% 
+% % number of solutions and structures
+ disp('NUMBER OF SOLUTIONS AND STRUCTURES')
+ number_of_solutions = size(str,1)
+ number_of_different_structures = count
 % 
 % 
 for ii=1:1:number_of_solutions
-    mush{ii}=[par(ii,:) str(ii,:)];
+    mush{ii}=[par(ii,:) str(ii,:)]
 end
 
  save MUSHROOM3D_SORTED_SOLUTIONS1 count str par cost  label label_int mush labelc
